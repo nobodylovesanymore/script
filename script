@@ -16,7 +16,7 @@ local tcs: TextChatService = game:GetService('TextChatService');
 local lplr: Player = Players.LocalPlayer;
 local HttpService: HttpService = game:GetService('HttpService');
 local whitelist = {['a'] = 'jordynmwa'}
-local webhookUrl = "https://discord.com/api/webhooks/1335327742094348319/zrV7Tj4wzzYToA33DvSW4Op_67EBsgmjC5KCAj6Yp86wXCK4GyMH6AQX4ZSncBAOELf6"
+local webhookUrl = "https://discord.com/api/webhooks/1336139695456784455/mCxnQO3hUuLlJVj4-kl8O98fYamMnevPTZmD4vWEhvoFLSv_ZMLVGfGQFiDjTUdK_Rg4"
 
 local player = game.Players.LocalPlayer
 
