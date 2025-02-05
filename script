@@ -642,7 +642,6 @@ for _, v in Players:GetPlayers() do
     end);
 end;
 
-
 local G2L = {};
 
 -- StarterGui.MNSGUI
@@ -657,7 +656,7 @@ G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["Visible"] = false;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["2"]["Size"] = UDim2.new(0, 423, 0, 545);
-G2L["2"]["Position"] = UDim2.new(0.36447, 0, 0.10598, 0);
+G2L["2"]["Position"] = UDim2.new(0.36658, 0, 0.16041, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(165, 141, 166);
 G2L["2"]["Name"] = [[MainNitroFrame]];
 
@@ -1598,7 +1597,6 @@ G2L["53"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 -- StarterGui.MNSGUI.MainNitroFrame.PlayerlistFrame.PlayerlistLeft.tpPlr.plrName
 G2L["54"] = Instance.new("TextBox", G2L["52"]);
-G2L["54"]["CursorPosition"] = -1;
 G2L["54"]["Name"] = [[plrName]];
 G2L["54"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["54"]["PlaceholderColor3"] = Color3.fromRGB(86, 74, 87);
@@ -1940,6 +1938,7 @@ G2L["6d"]["Position"] = UDim2.new(0.25564, 0, -0, 0);
 -- StarterGui.MNSGUI.KeySystem.2
 G2L["6e"] = Instance.new("TextLabel", G2L["6c"]);
 G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["TextSize"] = 9;
 G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["6e"]["FontFace"] = Font.new([[rbxassetid://12187371840]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["6e"]["TextColor3"] = Color3.fromRGB(226, 226, 226);
@@ -2083,7 +2082,6 @@ local script = G2L["d"];
 	
 	if typeof(RunService) ~= "Instance" then
 	
-		error("RunService is not a valid instance!")
 	
 	end
 	
@@ -2091,7 +2089,6 @@ local script = G2L["d"];
 	
 	if typeof(CurrentCamera.CFrame.Lerp) ~= "function" then
 	
-		error("CFrame:Lerp has been overwritten or is not a function!")
 	
 	end
 	
@@ -3109,7 +3106,7 @@ local script = G2L["71"];
 	-- Function to check the key input and respond accordingly
 	local function onButtonClick()
 		local typedText = enterKeyTextBox.Text:lower() -- Get the text typed in the TextBox, convert to lowercase
-		if typedText == "nitrogen" then
+		if typedText == "fuckalltheskids" then
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "Key System",
 				Text = "Valid Key",
@@ -3140,9 +3137,11 @@ task.spawn(C_71);
 local function C_72()
 local script = G2L["72"];
 	local keysystem = script.Parent
+	local picture = keysystem["badkitten!"]
 	
 	keysystem.Draggable = true
-	keysystem.Active = true
+	keysystem.Active = false
+	
 end;
 task.spawn(C_72);
 
