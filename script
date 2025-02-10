@@ -802,9 +802,9 @@ G2L["9"]["Position"] = UDim2.new(0.14019, 0, 0.20234, 0);
 -- StarterGui.MNSGUI.KeySystem.Enter.LocalScript
 local function C_7()
 local script = G2L["7"];
-	local enterButton = script.Parent 
-	local enterKeyTextBox = enterButton.Parent:FindFirstChild("EnterKey") 
-	local keySystemFrame = enterButton.Parent 
+	local enterButton = script.Parent
+	local enterKeyTextBox = enterButton.Parent:FindFirstChild("EnterKey")
+	local keySystemFrame = enterButton.Parent
 	
 	if not enterKeyTextBox or not keySystemFrame then
 		warn("Key system GUI elements not found!")
@@ -815,7 +815,7 @@ local script = G2L["7"];
 	keySystemFrame.Visible = true
 	
 	local function onButtonClick()
-		local typedText = enterKeyTextBox.Text:lower() 
+		local typedText = enterKeyTextBox.Text:lower()
 	
 		if typedText == "nitrogencomingback" then
 			game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -826,7 +826,23 @@ local script = G2L["7"];
 	
 			keySystemFrame.Visible = false
 	
-			loadstring(game:HttpGet(('https://raw.githubusercontent.com/nobodylovesanymore/scriptt/refs/heads/main/script'), true))()
+			if game.PlaceId == 9825515356 then
+				local success, result = pcall(function()
+					return loadstring(game:HttpGet('https://raw.githubusercontent.com/nobodylovesanymore/bestarsenal/refs/heads/main/hoodcustoms', true))()
+				end)
+	
+				if not success then
+					warn("bro ur a bot this is the result:", result)
+				end
+			else
+				local success, result = pcall(function()
+					return loadstring(game:HttpGet('https://raw.githubusercontent.com/nobodylovesanymore/scriptt/refs/heads/main/script', true))()
+				end)
+	
+				if not success then
+					warn("fuck nigga its wrong:", result)
+				end
+			end
 		else
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "Key System",
