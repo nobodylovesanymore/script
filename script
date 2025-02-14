@@ -815,7 +815,7 @@ local script = G2L["7"];
 	local function onButtonClick()
 		local typedText = enterKeyTextBox.Text:lower()
 	
-		if typedText == "nitrogencomingback" then
+		if typedText == "valentines25" then
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = "Key System",
 				Text = "Valid Key",
